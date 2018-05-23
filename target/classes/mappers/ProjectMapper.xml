@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dgit.mapper.ProjectMapper">   
+
+	<insert id="insertProject">
+		insert into project(name, startdate, enddate, state)
+		values(#{name}, #{startdate}, #{enddate}, #{state})
+	</insert>
+	
+	<insert id="insertContent">
+		insert into project_content(content)
+		values(#{content})
+	</insert>
+	
+	<select id="selectProList" resultType="Project">
+		select * from project;
+	</select>
+	
+	<select id="selectBynumProject" resultType="Project">
+		select * from project
+		where pro_num = #{pro_num};
+	</select>
+	
+	<select id="selectBynumContent" resultType="ProjectContent">
+		select * from
+		project_content where pro_num = #{pro_num};
+	</select>
+	
+	<update id="updateBynumProject">
+		update project set name=#{name},
+		startdate=#{startdate}, enddate=#{enddate}, state=#{state}
+		where
+		pro_num = #{pro_num}
+	</update>
+	
+	<update id="updateBynumContent">
+		update project_content set content=#{content} where
+		pro_num = #{pro_num}
+	</update>
+	
+	<delete id="deleteBynumProject">
+		delete from project where pro_num = #{pro_num}
+	</delete>
+	
+	<delete id="deleteBynumContent">
+		delete from project_content where pro_num =
+		#{pro_num}
+	</delete>
+</mapper>
