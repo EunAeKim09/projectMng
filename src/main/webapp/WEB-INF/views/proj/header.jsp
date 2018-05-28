@@ -15,11 +15,14 @@ header{
     line-height: 100px;
     margin: 0;
 }
+#version{
+	font-size: 15px;
+}
 </style>
 </head>
 <body>
 	<header>
-		<h1>SPMS(Simple Project Management System)</h1>
+		<h1>SPMS(Simple Project Management System) <span id="version"> version01</span></h1>
 	</header>
 </body>
 </html>
