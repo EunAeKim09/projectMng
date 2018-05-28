@@ -83,6 +83,7 @@ div#as a {
 		<a id="delete">삭제</a> 
 		<a href="${pageContext.request.contextPath }/proj/projectList">돌아가기</a>
 	</div>
+	</div>
 	<jsp:include page="footer.jsp" />
 	<script type="text/javascript">
 	var pronum = ${pro.pro_num};
