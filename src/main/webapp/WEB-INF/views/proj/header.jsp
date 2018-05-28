@@ -18,11 +18,15 @@ header{
 #version{
 	font-size: 15px;
 }
+#body{
+	min-height: 700px;
+}
 </style>
 </head>
 <body>
 	<header>
 		<h1>SPMS(Simple Project Management System) <span id="version"> version01</span></h1>
 	</header>
+	<div id="body">
 </body>
 </html>

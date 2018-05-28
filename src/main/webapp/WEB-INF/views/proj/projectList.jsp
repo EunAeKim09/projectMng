@@ -64,6 +64,7 @@ div.add{
 			</c:forEach>
 		</c:if>	
 	</table>
+	</div>
 	<jsp:include page="footer.jsp"/>
 </body>
 </html>
